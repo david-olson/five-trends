@@ -1,0 +1,40 @@
+.header {
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 150px;
+    .logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        img {
+            max-width: 200px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .divider {
+            width: 1px;
+            height: 75px;
+            display: inline-block;
+            background-color: #fff;
+            vertical-align: middle;
+            margin: 0 20px;
+        }
+        h1 {
+            display: inline-block;
+            vertical-align: middle;
+            color: #ffffff;
+            font-weight: normal;
+        }
+    }
+    .learn {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        a {
+            color: $primaryGray;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}

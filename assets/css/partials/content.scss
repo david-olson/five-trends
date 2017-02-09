@@ -1,0 +1,52 @@
+.text_block {
+    width: 100%;
+    max-width: $narrowMax;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.tiles {
+    width: 100%;
+    .tile {
+        width: (100%/5)-3;
+        margin-right: 3%;
+        display: inline-block;
+        vertical-align: top;
+        background-color: #ffffff;
+        border: 1px solid $secondaryGray;
+        padding: 20px;
+        box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+        &:last-of-type {
+            margin-right: 0;
+        }
+        h2 {
+            font-weight: 700;
+        }
+        p {
+        }
+        span {
+            font-weight: 900;
+            font-size: 2rem;
+        }
+    }
+    .tile_1 {
+        span {
+            color: $navy;
+        }
+    }
+    .tile_2 {
+        span {
+            color: $red;
+        }
+    }
+    .tile_3 {
+        span {
+            color: $green;
+        }
+    }
+    .tile_4 {
+        span {
+            color: $purple;
+        }
+    }
+}

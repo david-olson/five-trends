@@ -1,46 +1,47 @@
 //Fluid Typography. Scale Based on a 1.333 ratio.
 
 html {
-    font-size: calc(1em + 1vw);
+    font-size: calc(.5em + .5vw);
 }
 
 
 /* setting the max width*/
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 25em) {
     html {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 }
 
-body {
-    padding: 1em;
+body, h1, h2, h3, h4, h5, p, a, button, input {
+    font-family: $font;
+    color: $primaryGray;
 }
 
 h1 {
-    font-size: 3.157rem;
+    font-size: 1.333rem;
     line-height: 1.2;
+    text-transform: uppercase;
 }
 
 h2 {
-    font-size: 2.369rem;
+    font-size: 1.215rem;
     line-height: 1.2;
 }
 
 h3 {
-    font-size: 1.777rem;
+    font-size: 1.138rem;
     line-height: 1.2;
 }
 
 h4 {
-    font-size: 1.333rem;
+    font-size: 1.067rem;
     line-height: 1.2;
 }
 
 p {
     font-size: 1rem;
     line-height: 1.75rem;
-    text-align: justify;
 }
 
 .small {

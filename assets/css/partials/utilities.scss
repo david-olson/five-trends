@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: $wideMax;
+}

@@ -1,7 +1,11 @@
 //Widths
 
-$wideMax: 1200px;
+$wideMax: 1400px;
 $narrowMax: 600px;
+
+//Font
+
+$font: 'Roboto', sans-serif;
 
 //Colors
 
@@ -18,6 +22,9 @@ $orange: #f76800;
 $smallPadding: 10px;
 $largePadding: 20px;
 
-//Transition
+//Body Background
 
-$standardTransition: all ease-out .25s;
+body {
+    background-image: url('./assets/img/17123_PR_background-image.jpg');
+    background-size: cover;
+}
