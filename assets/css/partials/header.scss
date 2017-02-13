@@ -3,6 +3,7 @@
     position: relative;
     width: 100%;
     margin-bottom: 150px;
+    overflow: hidden;
     .logo {
         position: relative;
         top: 0;
@@ -28,13 +29,35 @@
         }
     }
     .learn {
-        position: absolute;
+        position: fixed;
         top: 20px;
         right: 0;
         a {
-            color: $primaryGray;
+            color: #ffffff;
             text-decoration: none;
             text-transform: uppercase;
+            display: block;
+            padding: 30px;
+            background-color: $orange;
+            transition: all ease-out .25s;
+            &:hover {
+                background-color: darken($orange, 10%);
+            }
+        }
+    }
+    .text_block {
+        width: 100%;
+        max-width: $narrowMax;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        text-align: center;
+        margin-top: 100px;
+        p, h1 {
+            color: #ffffff;
+        }
+        h1 {
+            font-weight: 900;
+            letter-spacing: 1px;
         }
     }
 }

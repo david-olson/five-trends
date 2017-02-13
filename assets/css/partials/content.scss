@@ -1,52 +1,117 @@
-.text_block {
-    width: 100%;
-    max-width: $narrowMax;
-    margin: 0 auto;
-    margin-bottom: 3rem;
-}
-
 .tiles {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
+    transform: translateY(-100px);
     .tile {
-        width: (100%/5)-3;
-        margin-right: 3%;
+        width: (100%/6)-2;
+        margin-right: 2%;
         display: inline-block;
         vertical-align: top;
         background-color: #ffffff;
         border: 1px solid $secondaryGray;
         padding: 20px;
         box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 100px;
+        margin-bottom: 20px;
+        @media only screen and (max-width: 1400px) and (min-width: 581px) {
+            width: (100%/3)-2;
+            &:nth-of-type(3n + 3) {
+                margin-right: 0;
+            }
+        }
+        @media only screen and (max-width: 580px) {
+            width: (100%/2)-2;
+            &:nth-of-type(2n + 2) {
+                margin-right: 0;
+            }
+        }
         &:last-of-type {
             margin-right: 0;
         }
+        &:after {
+            display: block;
+            position: absolute;
+            content: '';
+            height: 100px;
+            width: 100%;
+            background-color: $secondaryGray;
+            left: 0;
+            bottom: 0;
+            transform: skewY(-17deg) translateY(50px);
+            z-index: 1;
+        }
         h2 {
             font-weight: 700;
+            z-index: 2;
         }
         p {
+            z-index: 2;
+        position: relative;
         }
         span {
             font-weight: 900;
             font-size: 2rem;
+            z-index: 2;
+        }
+        a {
+            z-index: 2;
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            img {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+    .tile_0 {
+        span {
+            color: $blue;
+        }
+        &:after {
+            background-color: $blue;
         }
     }
     .tile_1 {
         span {
             color: $navy;
         }
+        &:after {
+            background-color: $navy;
+        }
     }
     .tile_2 {
         span {
             color: $red;
+        }
+        &:after {
+            background-color: $red;
         }
     }
     .tile_3 {
         span {
             color: $green;
         }
+        &:after {
+            background-color: $green;
+        }
     }
     .tile_4 {
         span {
             color: $purple;
+        }
+        &:after {
+            background-color: $purple;
+        }
+    }
+    .tile_5 {
+        span {
+            color: $orange;
+        }
+        &:after {
+            background-color: $orange;
         }
     }
 }

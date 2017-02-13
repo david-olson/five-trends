@@ -41,9 +41,13 @@ h4 {
 
 p {
     font-size: 1rem;
-    line-height: 1.75rem;
+    line-height: 1.75;
 }
 
 .small {
     font-size: .75rem;
+}
+
+h2.small {
+    font-size: 1rem;
 }
