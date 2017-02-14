@@ -4,6 +4,9 @@
     width: 100%;
     margin-bottom: 150px;
     overflow: hidden;
+    background-image: url(./assets/img/17123_dark-bg-img.jpg);
+    background-size: cover;
+    background-position: center;
     .logo {
         position: relative;
         top: 0;
@@ -46,13 +49,11 @@
         }
     }
     .text_block {
-        width: 100%;
-        max-width: $narrowMax;
-        margin: 0 auto;
+        width: 60%;
         margin-bottom: 3rem;
-        text-align: center;
+        text-align: left;
         margin-top: 100px;
-        p, h1 {
+        p, h1, h2 {
             color: #ffffff;
         }
         h1 {

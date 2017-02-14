@@ -5,85 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>5 Trends | Premier Inc.</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="main.min.css">
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
+
+    <section class="header">
+        <div class="container">
             <div class="logo">
                 <img src="./assets/img/17123_PR_logo.svg" alt="" />
                 <div class="divider"></div>
-                <img src="./assets/img/17123_perspectives.svg" alt="" />
+                <h1><span class="light">Perspectives</span> <span class="bold">2017</span></h1>
             </div>
             <div class="learn">
                 <a href="http://learn.premierinc.com">Get the Ebook</a>
             </div>
             <div class="text_block">
-                <h1>Get All the Answers</h1>
-                <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Laoreet rutrum faucibus dolor auctor. </p>
+                <h2>Prepare your organization for the changes ahead</h2>
+                <p>Wondering what changes you can expect to see in healthcare under the new administration? You’re not alone. Our team of healthcare experts share what you can expect to see in 2017 and how you can position your organization for success. Watch the video now.</p>
             </div>
+            <div class="main_video" id="mainVideo">
+                <div class="scoreboard" id="scoreboard">
+                    <div id="videoTarget"></div>
+                </div>
+                <div class="controls" id="controls"></div>
+            </div>
+            <div class="video_tiles" id="videoTiles">
+                <div class="tile">
+                    <span class="vid_num">00</span>
+                    <h3>A look Ahead: Healthcare Under a New Administration</h3>
+                    <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                </div>
+                <div class="tile">
+                    <span class="vid_num">01</span>
+                    <h3>Repeal and Replace: What to Expect</h3>
+                    <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                </div>
+                <div class="tile">
+                    <span class="vid_num">02</span>
+                    <h3>Value-Based Care: The Movement</h3>
+                    <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                </div>
+                <div class="tile">
+                    <span class="vid_num">03</span>
+                    <h3>Transfer of Power: State Designed Healthcare</h3>
+                    <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                </div>
+                <div class="tile">
+                    <span class="vid_num">04</span>
+                    <h3>Competition: The Cure to High Drug Costs</h3>
+                    <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                </div>
+                <div class="tile">
+                    <span class="vid_num">05</span>
+                    <h3><span class="red">Coming soon:</span> Consumer-Driven Healthcare: What it Means for You</h3>
+                    <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="form">
 
-        </header>
-        <div class="video_bg" id="videoBg">
-            <video autoplay loop muted>
-                <source src="./assets/video/loop.mp4">
-                <source>
-                <source>
-            </video>
-        </div>
-    </div>
-    <main>
-        <div class="tiles">
-            <div class="tile tile_0">
-                <span>00</span>
-                <h2 class="small">Perspectives Overview</h2>
-                <p class="small">What to expect and what is Premier’s value-add...</p>
-                <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
-            </div>
-            <div class="tile tile_1">
-                <span>01</span>
-                <h2 class="small">ACA’s Repeal and Replacement</h2>
-                <p class="small">What to expect and what is Premier’s value-add...</p>
-                <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
-            </div>
-            <div class="tile tile_2">
-                <span>02</span>
-                <h2 class="small">Value-Based Care Movement</h2>
-                <p class="small">What to expect and what is Premier’s value-add...</p>
-                <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
-            </div>
-            <div class="tile tile_3">
-                <span>03</span>
-                <h2 class="small">More Power Moved to The States</h2>
-                <p class="small">What to expect and what is Premier’s value-add...</p>
-                <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
-            </div>
-            <div class="tile tile_4">
-                <span>04</span>
-                <h2 class="small">Drug Prices</h2>
-                <p class="small">What to expect and what is Premier’s value-add...</p>
-                <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
-            </div>
-            <div class="tile tile_5">
-                <span>05</span>
-                <h2 class="small">Greater Transparency and Empowered Consumers</h2>
-                <p class="small">What to expect and what is Premier’s value-add...</p>
-                <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
-            </div>
-        </div>
         <div class="container">
-            <div class="form">
+            <div>
                 <h2>Lorem ipsum dolor sit amet.</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore repudiandae numquam velit, laboriosam dolorem!</p>
                 <!--FORM GOES HERE-->
             </div>
         </div>
-    </main>
-
-    <div class="bottom_angle"></div>
+    </section>
+    <footer>
+        <div class="legal"></div>
+        <div class="social"></div>
+    </footer>
     <script src="./assets/js/custom.min.js"></script>
+    <script src="./assets/js/vendors.min.js"></script>
+    <script>
+        var tag = document.createElement('script');
+        
+        tag.src = 'https://www.youtube.com/iframe_api';
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
+        var videoTarget;
+        
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('videoTarget', {
+                height: '390',
+                width: '640',
+                videoId: 'M1LRVICWPUk',
+                playerVars: {
+                    controls: 0,
+                    showinfo: 0,
+                    rel: 0
+                }
+            });
+            $('.scoreboard').fitVids();
+        }
+        
+    </script>
 </body>
 
 </html>
