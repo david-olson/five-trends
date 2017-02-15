@@ -11,7 +11,9 @@
 </head>
 
 <body>
-
+    <div class="preloader">
+        <img src="./assets/img/17123_PR_logo.svg" alt="" class="preload_logo" />
+    </div>
     <section class="header">
         <div class="container">
             <div class="logo">
@@ -20,7 +22,14 @@
                 <h1><span class="light">Perspectives</span> <span class="bold">2017</span></h1>
             </div>
             <div class="learn">
-                <a href="http://learn.premierinc.com">Get the Ebook</a>
+                <a href="http://learn.premierinc.com">
+                    <p class="read_it">Read It Now</p>
+                    <p class="read_it_sub">Susan Devore’s 2017 Perspectives Report</p>
+                </a>
+                <a href="#">
+                    <p class="contact_expert">Contact an Expert</p>
+                    <p class="contact_expert_sub">Find out how Premier can position you for success as you navigate 2017.</p>
+                </a>
             </div>
             <div class="text_block">
                 <h2>Prepare your organization for the changes ahead</h2>
@@ -30,44 +39,54 @@
                 <div class="scoreboard" id="scoreboard">
                     <div id="videoTarget"></div>
                 </div>
-                <div class="controls" id="controls"></div>
+                <div class="controls" id="controls">
+                    <div class="now_playing" id="nowPlaying">
+                        <span class="np_info">Now Playing: </span>
+                        <span class="video_title" id="videoTitle">Video Title</span>
+                    </div>
+                    <div class="skip_holder" id="skipHolder">
+                        <span class="skip_info">Skip to Next: </span>
+                        <span class="next_title" id="nextTitle">Next Video Title</span>
+                        <a href="#"><img src="./assets/img/17123_skip.png" alt="Skip" /></a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
             </div>
             <div class="video_tiles" id="videoTiles">
-                <div class="tile">
+                <div class="tile tile_0" id="tile0">
                     <span class="vid_num">00</span>
                     <h3>A look Ahead: Healthcare Under a New Administration</h3>
-                    <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                    <a href="?id=0" class="play_button" id="video0"><img src="./assets/img/17123_go.svg" alt="" /></a>
                 </div>
-                <div class="tile">
+                <div class="tile tile_1" id="tile1">
                     <span class="vid_num">01</span>
                     <h3>Repeal and Replace: What to Expect</h3>
-                    <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                    <a href="?id=1" class="play_button" id="video1"><img src="./assets/img/17123_go.svg" alt="" /></a>
                 </div>
-                <div class="tile">
+                <div class="tile tile_2"id="tile2">
                     <span class="vid_num">02</span>
                     <h3>Value-Based Care: The Movement</h3>
-                    <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                    <a href="?id=2" class="play_button" id="video2"><img src="./assets/img/17123_go.svg" alt="" /></a>
                 </div>
-                <div class="tile">
+                <div class="tile tile_3"id="tile3">
                     <span class="vid_num">03</span>
                     <h3>Transfer of Power: State Designed Healthcare</h3>
-                    <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                    <a href="?id=3" class="play_button" id="video3"><img src="./assets/img/17123_go.svg" alt="" /></a>
                 </div>
-                <div class="tile">
+                <div class="tile tile_4"id="tile4">
                     <span class="vid_num">04</span>
                     <h3>Competition: The Cure to High Drug Costs</h3>
-                    <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                    <a href="?id=4" class="play_button" id="video4"><img src="./assets/img/17123_go.svg" alt="" /></a>
                 </div>
-                <div class="tile">
+                <div class="tile tile_5"id="tile5">
                     <span class="vid_num">05</span>
                     <h3><span class="red">Coming soon:</span> Consumer-Driven Healthcare: What it Means for You</h3>
-                    <a href="#"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                    <a href="?id=5" class="play_button" id="video5"><img src="./assets/img/17123_go.svg" alt="" /></a>
                 </div>
             </div>
         </div>
     </section>
     <section class="form">
-
         <div class="container">
             <div>
                 <h2>Lorem ipsum dolor sit amet.</h2>
@@ -77,34 +96,84 @@
         </div>
     </section>
     <footer>
-        <div class="legal"></div>
-        <div class="social"></div>
+        <div class="container">
+            <div class="legal">
+                <p>&copy; Copyright 2017 Premier, Inc. All rights reserved.</p>
+                <p>Premier, Inc. 13034 Ballantyne Corporate Place, Charlotte, NC 28277 | 1-888-777-1552</p>
+            </div>
+            <div class="social">
+                <div class="share"><a href="#">Share</a> | <a href="#">Connect</a></div>
+                <div class="icons">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="./assets/img/17123_instagram.svg" alt="Instagram" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./assets/img/17123_facebook.svg" alt="Facebook" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./assets/img/17123_linkedin.svg" alt="LinkedIn" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./assets/img/17123_twitter.svg" alt="Twitter" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./assets/img/17123_youtube.svg" alt="Youtube" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
     </footer>
     <script src="./assets/js/custom.min.js"></script>
     <script src="./assets/js/vendors.min.js"></script>
     <script>
-        var tag = document.createElement('script');
+        var tag = document.createElement('script'),
+            vidNumber,
+            theVideoId;
         
+        //Get the id parameter from the url
+        vidNumber = getQuery('id');
+        
+        //If there is no parameter, try and get a cookie for the last video the user watched
+        if (!vidNumber) {
+            vidNumber = getCookie('lvw17123');
+            vidNumber = parseInt(vidNumber) + 1;
+            vidNumber = String(vidNumber);
+        }
+        
+        //Give the video tile the active class
+        
+        var activeTile = 'tile' + vidNumber,
+            activeTileObject = document.getElementById(activeTile);
+        console.log(activeTile);
+        
+        $('#' + activeTile).addClass('tile_active');
+        
+        //Get the actual YouTube Video Id from the list found in main.js
+        theVideoId = getVideoId(vidNumber);
+
         tag.src = 'https://www.youtube.com/iframe_api';
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        
+
         var videoTarget;
-        
+
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('videoTarget', {
                 height: '390',
                 width: '640',
-                videoId: 'M1LRVICWPUk',
+                videoId: theVideoId.id,
                 playerVars: {
                     controls: 0,
                     showinfo: 0,
                     rel: 0
                 }
             });
+            updateVideoTitle(theVideoId);
             $('.scoreboard').fitVids();
         }
-        
     </script>
 </body>
 

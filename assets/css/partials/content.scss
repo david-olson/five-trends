@@ -1,15 +1,69 @@
 .main_video {
     display: inline-block;
-    width: 66%;
+    width: 55%;
     vertical-align: top;
     padding: 10px;
+    @media only screen and (max-width: 900px) {
+        width: 100%;
+    }
+    .scoreboard {
+        margin-bottom: 10px;
+    }
+    .controls {
+        display: block;
+        width: 100%;
+        background-color: rgba(0,0,0,0.75);
+        padding: 5px 30px;
+        color: #ffffff;
+        font-size: .75rem;
+        font-weight: 300;
+        line-height: 40px;
+        vertical-align: middle;
+        margin-bottom: 40px;
+        .now_playing {
+            display: block;
+            float: left;
+            .np_info {
+                text-transform: uppercase;
+            }
+            .video_title {
+                color: $blue;
+            }
+        }
+        .skip_holder {
+            display: block;
+            float: right;
+            .skip_info {
+                text-transform: uppercase;
+            }
+            .next_title {
+                color: $blue;
+                margin-right: 20px;
+            }
+            a {
+                
+                line-height: 40px;
+                img {
+                    width: 20px; 
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
 }
+
 .video_tiles {
-    width: 33%;
+    width: 44%;
     display: inline-block;
     vertical-align: top;
     padding: 10px;
-    
+    &:hover div {
+        opacity: .5;
+    }
+    @media only screen and (max-width: 900px) {
+        width: 100%;
+    }
     .tile {
         position: relative;
         overflow: hidden;
@@ -21,19 +75,58 @@
         padding: 10px;
         margin-bottom: 10px;
         padding-bottom: 75px;
-        box-shadow: 0 0 10px 4px rgba(0,0,0,0.25);
-        &:nth-of-type(3n+3) {
+        box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.25);
+        transition: all ease-out .25s;
+        &:hover {
+            opacity: 1;
+        }
+        &:after {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 105%;
+            background-color: #aaaaaa;
+            transition: all ease-out .25s;
+            height: 100px;
+            bottom: 0;
+            left: 0;
+            transform: skewY(-17deg) translateY(50px);
+            z-index: 1;
+            backface-visibility: hidden;
+        }
+        @media only screen and (min-width: 1200px) {
+            &:nth-of-type(3n+3) {
+                margin-right: 0;
+            }
+        }
+        @media only screen and (max-width: 1200px) {
+            width: 48%;
+            margin-right: 1.8%;
+            &:nth-of-type(2n+2) {
+                margin-right: 0;
+            }
+        }
+        @media only screen and (max-width: 900px) {
+            width: 100%;
             margin-right: 0;
+            padding-bottom: 10px;
+            &:after {
+                transform: skewY(-17deg) translateY(120px);
+            }
         }
         .vid_num {
             font-size: 1.5rem;
             font-weight: bold;
             display: block;
             margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
         }
         h3 {
             font-size: .65rem;
             font-weight: bold;
+            position: relative;
+            z-index: 2;
         }
         a {
             position: absolute;
@@ -45,17 +138,56 @@
                 height: 30px;
             }
         }
+        
+    }
+    .tile_0 {
+        .vid_num {
+            color: $blue;
+        }
         &:after {
-            display: block;
-            position: absolute;
-            content: '';
-            width: 100%;
-            background-color: #aaaaaa;
-            height: 100px;
-            bottom: 0;
-            left: 0;
-            transform: skewY(-17deg) translateY(50px);
-            z-index: 1;
+            background-color: $blue;
+        }
+    }
+    .tile_1 {
+        .vid_num {
+            color: $navy;
+        }
+        &:after {
+            background-color: $navy;
+        }
+    }
+    .tile_2 {
+        .vid_num {
+            color: $red;
+        }
+        &:after {
+            background-color: $red;
+        }
+    }
+    .tile_3 {
+        .vid_num {
+            color: $green;
+        }
+        &:after {
+            background-color: $green;
+        }
+    }
+    .tile_4 {
+        .vid_num {
+            color: $purple;
+        }
+        &:after {
+            background-color: $purple;
+        }
+    }
+    .tile_active {
+        .vid_num, h3 {
+            color: #ffffff;
+            transition-delay: .15s;
+            transition: all ease-out .25s;
+        }
+        &:after {
+            height: 300px;
         }
     }
 }

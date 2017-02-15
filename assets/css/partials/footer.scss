@@ -1,0 +1,49 @@
+footer {
+    background-color: $blue;
+    padding: 40px 0;
+    .legal {
+        display: block;
+        float: left;
+        p {
+            font-size: .75rem;
+            color: #ffffff;
+        }
+    }
+    .social {
+        display: block;
+        float: right;
+        
+        .share {
+            display: inline-block;
+            vertical-align: middle;
+            color: #036483;
+            margin-right: 20px;
+            a {
+                color: #036483;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+        .icons {
+            display: inline-block;
+            vertical-align: middle;
+            ul {
+                list-style: none;
+            }
+            li {
+                display: inline-block;
+                margin-right: 5px;
+            }
+            img {
+                max-width: 40px;
+                max-height: 40px;
+                height: 40px;
+                width: 40px;
+                transition: all ease-out .25s;
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}

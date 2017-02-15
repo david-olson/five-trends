@@ -2,7 +2,6 @@
     padding-top: 20px;
     position: relative;
     width: 100%;
-    margin-bottom: 150px;
     overflow: hidden;
     background-image: url(./assets/img/17123_dark-bg-img.jpg);
     background-size: cover;
@@ -35,16 +34,48 @@
         position: fixed;
         top: 20px;
         right: 0;
+        z-index: 999;
         a {
             color: #ffffff;
             text-decoration: none;
-            text-transform: uppercase;
             display: block;
-            padding: 30px;
+            padding: 20px 30px;
             background-color: $orange;
             transition: all ease-out .25s;
+            max-width: 300px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px 5px rgba(0,0,0,0.25);
+            p {
+                color: #ffffff;
+                margin-bottom: 0;
+                line-height: 1;
+            }
+            .read_it {
+                font-size: 1.75rem;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            .read_it_sub {
+                font-size: .55rem;
+                text-align: center;
+            }
+            .contact_expert {
+                font-size: 1.15rem;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            .contact_expert_sub {
+                font-size: .55rem;
+                text-align: center;
+            }
             &:hover {
                 background-color: darken($orange, 10%);
+            }
+            &:last-of-type {
+                background-color: $blue;
+                &:hover {
+                    background-color: darken($blue, 10%);
+                }
             }
         }
     }
