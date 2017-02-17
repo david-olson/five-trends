@@ -36,3 +36,44 @@
         transform: translate(-50%, -50%);
     }
 }
+
+.toast_overlay {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.share_toaster {
+    display: none;
+    max-width: 500px;
+    background-color: #fff;
+    text-align: center;
+    position: fixed;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    z-index: 99999;
+    transition: cubic-bezier(.55,-0.39,.44,1.32) .5s;
+    transform: translate(-50%, -500%);
+    .link {
+        padding: 10px;
+        background-color: #efefef;
+        margin-bottom: 1rem
+    }
+    ul {
+        list-style: none;
+        li {
+            display: inline-block;
+            margin-right: 20px;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}

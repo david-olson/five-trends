@@ -107,11 +107,15 @@
             }
         }
         @media only screen and (max-width: 900px) {
-            width: 100%;
-            margin-right: 0;
+//            width: 100%;
+//            margin-right: 0;
+            min-height: 100px;
             padding-bottom: 10px;
+            h3 {
+                max-width: 80%;
+            }
             &:after {
-                transform: skewY(-17deg) translateY(120px);
+                transform: skewY(-23deg) translateY(100px);
             }
         }
         .vid_num {
@@ -138,7 +142,16 @@
                 height: 30px;
             }
         }
+        .play_inactive {
+            cursor: default;
+        }
         
+    }
+    .inactive {
+        opacity: .5;
+        &:hover {
+            opacity: .5;
+        }
     }
     .tile_0 {
         .vid_num {
@@ -187,7 +200,7 @@
             transition: all ease-out .25s;
         }
         &:after {
-            height: 300px;
+            height: 500px;
         }
     }
 }

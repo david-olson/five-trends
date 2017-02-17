@@ -13,9 +13,19 @@ window.onpopstate = function() {
 function main() {
     setTileHeights();
     playClickHandler();
+    playInactiveClickHandler();
     setTimeout(function() {
         $('.preloader').fadeOut(500);
-    },500)
+    },500);
+    $('#toastOverlay').click(function(){
+        setTimeout(function() {
+            $('#toastOverlay').fadeOut(500);
+        }, 250)
+        $('#shareToaster').css({
+            transform: 'translate(-50%, -500%)'
+        });
+        
+    });
 }
 
 function setTileHeights() {
@@ -116,64 +126,67 @@ function changeHeading(param) {
 }
 
 function getVideoId(number) {
-    console.log(number);
+    number = parseInt(number);
     var videoId,
         videoIds = {
             0: {
                 'id': 'M1LRVICWPUk',
                 'sequence': 0,
-                'title': 'Intro',
-                'nextTitle': 'Video 1'
+                'title': '00 A look Ahead',
+                'nextTitle': '01 Repeal and Replace'
             },
             1: {
                 'id': 'M1LRVICWPUk',
                 'sequence': 1,
-                'title': 'Video 1',
-                'nextTitle': 'Video 2'
+                'title': '01 Repeal and Replace',
+                'nextTitle': '02 Value-Based Care'
             },
             2: {
                 'id': '6nT911jkWEo',
                 'sequence': 2,
-                'title': 'Video 2',
-                'nextTitle': 'Video 3'
+                'title': '02 Value-Based Care',
+                'nextTitle': '03 Transfer of Power'
             },
             3: {
                 'id': 'abQRt6p8T7g',
                 'sequence': 3,
-                'title': 'Video 3',
-                'nextTitle': 'Video 4'
+                'title': '03 Transfer of Power',
+                'nextTitle': '04 Competition'
             },
             4: {
                 'id': 'HamYmjllE6A',
                 'sequence': 4,
-                'title': 'Video 4',
-                'nextTitle': 'Video 5'
+                'title': '04 Competition',
+                'nextTitle': '05 Consumer-Driven Healthcare'
             },
             5: {
                 'id': 'VHdsoNewFdU',
                 'sequence': 5,
-                'title': 'Video 5',
+                'title': '05 Consumer-Driven Healthcare',
                 'nextTitle': 'Video 6'
             }
         }
 
     switch (number) {
-    case '0':
+    case 0:
         videoId = videoIds[0];
         break;
-    case '1':
+    case 1:
         videoId = videoIds[1];
         break;
-    case '2':
+    case 2:
         videoId = videoIds[2];
         break;
-    case '3':
+    case 3:
         videoId = videoIds[3];
         break;
-    case '4':
+    case 4:
         videoId = videoIds[4];
         break;
-    case '5':
+    case 5:
+        videoId = videoIds[5];
+        break;
+    case 6:
         videoId = videoIds[5];
         break;
     default:
@@ -204,7 +217,7 @@ function updateVideoTitle(string) {
 }
 
 function playClickHandler() {
-    var playButtons = document.getElementsByClassName('play_button');
+    var playButtons = document.getElementsByClassName('play_button_active');
 
     for (var x = 0; x < playButtons.length; x++) {
         playButtons[x].addEventListener('click', function (e) {
@@ -222,4 +235,40 @@ function playClickHandler() {
             history.pushState(null, null,attr);
         });
     }
+}
+
+function playInactiveClickHandler() {
+    var playButtonsInactive = document.getElementsByClassName('play_inactive'),
+        x;
+    
+    for (x = 0; x<playButtonsInactive.length; x++) {
+        playButtonsInactive[x].addEventListener('click', function(e) {
+           e.preventDefault(); 
+        });
+    }
+}
+
+function readItNow() {
+    $('.form').slideDown(250);
+}
+
+function contactExpert() {
+    $('.form').slideDown(250);
+}
+
+function shareHandler() {
+    var videoLink = document.getElementById('shareLink'),
+        link = window.location.href;
+    
+    videoLink.innerHTML = link;
+    
+    $('#toastOverlay').fadeIn(500);
+    $('#shareToaster').css({
+        display: 'block'
+    });
+    setTimeout(function() {
+       $('#shareToaster').css({
+          transform: 'translate(-50%, -50%)' 
+       });
+    }, 250);
 }
