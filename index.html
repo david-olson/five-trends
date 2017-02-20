@@ -7,32 +7,63 @@
     <title>5 Trends | Premier Inc.</title>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="main.min.css">
+    <link rel="stylesheet" href="http://offers.premierinc.com/rs/381-NBB-525/images/17123_A_main.min.css">
+<!--   <link rel="stylesheet" href="main.min.css">-->
+    <meta class="mktoBoolean" id="tile0active" mktoName="Tile 0 Active" false_value="inactive" true_value="button_active">
+    <meta class="mktoString" id="tile0ytid" mktoName="Tile 0 YouTube ID" default="qbmmwjWIOpo">
+    <meta class="mktoString" id="tile0title" mktoName="Tile 0 Title" default="A Look Ahead">
+    <meta class="mktoString" id="tile0subtitle" mktoName="Tile 0 Sub Title" default="Healthcare Under a New Administration">
     <meta class="mktoBoolean" id="tile1active" mktoName="Tile 1 Active" false_value="inactive" true_value="button_active">
+    <meta class="mktoString" id="tile1ytid" mktoName="Tile 1 YouTube ID" default="M1LRVICWPUk">
+    <meta class="mktoString" id="tile1title" mktoName="Tile 1 Title" default="Repeal and Replace">
+    <meta class="mktoString" id="tile1subtitle" mktoName="Tile 1 Sub Title" default="What to Expect">
+    <meta class="mktoBoolean" id="tile2active" mktoName="Tile 2 Active" false_value="inactive" true_value="button_active">
+    <meta class="mktoString" id="tile2ytid" mktoName="Tile 2 YouTube ID" default="M1LRVICWPUk">
+    <meta class="mktoString" id="tile2title" mktoName="Tile 2 Title" default="Value-Based Care">
+    <meta class="mktoString" id="tile2subtitle" mktoName="Tile 2 Sub Title" default="The Movement">
+    <meta class="mktoBoolean" id="tile3active" mktoName="Tile 3 Active" false_value="inactive" true_value="button_active">
+    <meta class="mktoString" id="tile3ytid" mktoName="Tile 3 YouTube ID" default="M1LRVICWPUk">
+    <meta class="mktoString" id="tile3title" mktoName="Tile 3 Title" default="Transfer of Power">
+    <meta class="mktoString" id="tile3subtitle" mktoName="Tile 3 Sub Title" default="State Designed Healthcare">
+    <meta class="mktoBoolean" id="tile4active" mktoName="Tile 4 Active" false_value="inactive" true_value="button_active">
+    <meta class="mktoString" id="tile4ytid" mktoName="Tile 4 YouTube ID" default="M1LRVICWPUk">
+    <meta class="mktoString" id="tile4title" mktoName="Tile 4 Title" default="Competition">
+    <meta class="mktoString" id="tile4subtitle" mktoName="Tile 4 Sub Title" default="The Cure to High Drug Costs">
+    <meta class="mktoBoolean" id="tile5active" mktoName="Tile 5 Active" false_value="inactive" true_value="button_active">
+    <meta class="mktoString" id="tile5ytid" mktoName="Tile 5 YouTube ID" default="M1LRVICWPUk">
+    <meta class="mktoString" id="tile5title" mktoName="Tile 5 Title" default="Coming soon: Consumer-Driven Healthcare">
+    <meta class="mktoString" id="tile5subtitle" mktoName="Tile 5 Sub Title" default="What it Means for You">
+    <meta class="mktoBoolean" id="button1Show" mktoName="Show Button 1" false_value="none" true_value="block">
+    <meta class="mktoString" id="button1Link" mktoName="Button 1 Link" default="#">
+    <meta class="mktoBoolean" id="button2Show" mktoName="Show Button 2" false_value="none" true_value="block">
+    <meta class="mktoString" id="button2Link" mktoName="Button 2 Link" default="javascript:contactExpert()">
+    <meta class="mktoBoolean" id="mobileButtonPadding" mktoName="Mobile Button Padding - Turn off if both buttons are disabled" false_value="none" true_value="block">
 </head>
 
 <body>
     <div class="preloader">
-        <img src="./assets/img/17123_PR_logo.svg" alt="" class="preload_logo" />
+        <img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_PR_logo.svg" alt="" class="preload_logo" />
     </div>
     <section class="header">
         <div class="container">
+           <div class="mobile_button_padding" style="display: ${mobileButtonPadding}"></div>
             <div class="logo">
-                <img src="./assets/img/17123_PR_logo.svg" alt="" />
+                <img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_PR_logo.svg" alt="" />
                 <div class="divider"></div>
                 <h1><span class="light">Perspectives</span> <span class="bold">2017</span></h1>
             </div>
             <div class="learn">
-                <a href="javascript:readItNow()">
+                <a href="${button1Link}" style="display: ${button1Show}">
                     <p class="read_it">Read It Now</p>
                     <p class="read_it_sub">Susan Devore’s 2017 Perspectives Report</p>
                 </a>
-                <a href="javascript:contactExpert()">
+                <a href="${button2Link}" style="display: ${button2Show}">
                     <p class="contact_expert">Contact an Expert</p>
                     <p class="contact_expert_sub">Find out how Premier can position you for success as you navigate 2017.</p>
                 </a>
             </div>
-            <div class="text_block">
+            
+            <div class="text_block mktoText" id="mainBody" mktoName="Main Body Text">
                 <h2>Healthcare is changing. Are. You. Ready?</h2>
                 <p>The future of healthcare is up in the air, find out what the experts at Premier think we will see in 2017 and the important next steps we must take to impact, influence and transform the conversation.</p>
             </div>
@@ -48,41 +79,41 @@
                     <div class="skip_holder" id="skipHolder">
                         <span class="skip_info">Skip to Next: </span>
                         <span class="next_title" id="nextTitle">Next Video Title</span>
-                        <a href="javascript:skipVideo()"><img src="./assets/img/17123_skip.png" alt="Skip" /></a>
+                        <a href="javascript:skipVideo()"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_skip.png" alt="Skip" /></a>
                     </div>
                     <div class="clear"></div>
                 </div>
             </div>
             <div class="video_tiles" id="videoTiles">
-                <div class="tile tile_0 ${tile1active}" id="tile0">
+                <div class="tile tile_0 ${tile0active}" id="tile0">
                     <span class="vid_num">00</span>
-                    <h3>A look Ahead: Healthcare Under a New Administration</h3>
-                    <a href="?id=0" class="play_button play_${tile1active}" id="video0"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                    <h3>${tile0title}: ${tile0subtitle}</h3>
+                    <a href="?id=0" class="play_button play_${tile0active}" id="video0"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_go.svg" alt="" /></a>
                 </div>
-                <div class="tile tile_1" id="tile1">
+                <div class="tile tile_1 ${tile1active}" id="tile1">
                     <span class="vid_num">01</span>
-                    <h3>Repeal and Replace: What to Expect</h3>
-                    <a href="?id=1" class="play_button play_button_active" id="video1"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                    <h3>${tile1title}: ${tile1subtitle}</h3>
+                    <a href="?id=1" class="play_button play_${tile1active}" id="video1"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_go.svg" alt="" /></a>
                 </div>
-                <div class="tile tile_2"id="tile2">
+                <div class="tile tile_2 ${tile2active}" id="tile2">
                     <span class="vid_num">02</span>
-                    <h3>Value-Based Care: The Movement</h3>
-                    <a href="?id=2" class="play_button play_button_active" id="video2"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                    <h3>${tile2title}: ${tile2subtitle}</h3>
+                    <a href="?id=2" class="play_button play_${tile2active}" id="video2"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_go.svg" alt="" /></a>
                 </div>
-                <div class="tile tile_3"id="tile3">
+                <div class="tile tile_3 ${tile3active}" id="tile3">
                     <span class="vid_num">03</span>
-                    <h3>Transfer of Power: State Designed Healthcare</h3>
-                    <a href="?id=3" class="play_button play_button_active" id="video3"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                    <h3>${tile3title}: ${tile3subtitle}</h3>
+                    <a href="?id=3" class="play_button play_${tile3active}" id="video3"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_go.svg" alt="" /></a>
                 </div>
-                <div class="tile tile_4"id="tile4">
+                <div class="tile tile_4 ${tile4active}" id="tile4">
                     <span class="vid_num">04</span>
-                    <h3>Competition: The Cure to High Drug Costs</h3>
-                    <a href="?id=4" class="play_button play_button_active" id="video4"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                    <h3>${tile4title}: ${tile4subtitle}</h3>
+                    <a href="?id=4" class="play_button play_${tile4active}" id="video4"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_go.svg" alt="" /></a>
                 </div>
-                <div class="tile tile_5 inactive"id="tile5">
+                <div class="tile tile_5 ${tile5active}" id="tile5">
                     <span class="vid_num">05</span>
-                    <h3><span class="red">Coming soon:</span> Consumer-Driven Healthcare: What it Means for You</h3>
-                    <a href="?id=5" class="play_button play_inactive" id="video5"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                    <h3>${tile5title}: ${tile5subtitle}</h3>
+                    <a href="?id=5" class="play_button play_${tile5active}" id="video5"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_go.svg" alt="" /></a>
                 </div>
             </div>
         </div>
@@ -107,19 +138,19 @@
                 <div class="icons">
                     <ul>
                         <li>
-                            <a href="https://www.instagram.com/premierha/"><img src="./assets/img/17123_instagram.svg" alt="Instagram" /></a>
+                            <a href="https://www.instagram.com/premierha/"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_instagram.svg" alt="Instagram" /></a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/premierhealthcarealliance/"><img src="./assets/img/17123_facebook.svg" alt="Facebook" /></a>
+                            <a href="https://www.facebook.com/premierhealthcarealliance/"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_facebook.svg" alt="Facebook" /></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/company-beta/6766/"><img src="./assets/img/17123_linkedin.svg" alt="LinkedIn" /></a>
+                            <a href="https://www.linkedin.com/company-beta/6766/"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_linkedin.svg" alt="LinkedIn" /></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/premierha"><img src="./assets/img/17123_twitter.svg" alt="Twitter" /></a>
+                            <a href="https://twitter.com/premierha"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_twitter.svg" alt="Twitter" /></a>
                         </li>
                         <li>
-                            <a href="https://www.youtube.com/user/premieralliance#"><img src="./assets/img/17123_youtube.svg" alt="Youtube" /></a>
+                            <a href="https://www.youtube.com/user/premieralliance#"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_youtube.svg" alt="Youtube" /></a>
                         </li>
                     </ul>
                 </div>
@@ -134,37 +165,120 @@
         <div class="link" id="shareLink"></div>
         <div class="social_share_icons">
             <ul>
-                <li><a id="facebookShare" href="#"><img src="./assets/img/17123_facebook.svg" alt="Share on Facebook" /></a></li>
-                <li><a target="_blank" href="https://twitter.com/intent/tweet?text=Read%20this%3A%205%20Trends%20in%20Healthcare%20for%202017&url=http%3A%2F%2Fpremierinc.com"><img src="./assets/img/17123_twitter.svg" alt="Share on Twitter" /></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fpremierinc.com"><img src="./assets/img/17123_linkedin.svg" alt="Share on LinkedIn" /></a></li>
+                <li>
+                    <a id="facebookShare" href="#"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_facebook.svg" alt="Share on Facebook" /></a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://twitter.com/intent/tweet?text=Read%20this%3A%205%20Trends%20in%20Healthcare%20for%202017&url=http%3A%2F%2Fpremierinc.com"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_twitter.svg" alt="Share on Twitter" /></a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fpremierinc.com"><img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_linkedin.svg" alt="Share on LinkedIn" /></a>
+                </li>
             </ul>
         </div>
         <p><a href="javascript:shareClose()">Close this window.</a></p>
     </div>
-    <script src="./assets/js/custom.min.js"></script>
-    <script src="./assets/js/vendors.min.js"></script>
+    <script src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_A_custom.min.js"></script>
+<!--   <script src="./assets/js/custom.min.js"></script>-->
+    <script src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_A_vendors.min.js"></script>
     <script>
+        function getVideoId(number) {
+            number = parseInt(number);
+            var videoId,
+                videoIds = {
+                    0: {
+                        'id': '${tile0ytid}',
+                        'sequence': 0,
+                        'title': '00 ${tile0title}',
+                        'nextTitle': '01 ${tile1title}',
+                        'active': '${tile0active}'
+                    },
+                    1: {
+                        'id': '${tile1ytid}',
+                        'sequence': 1,
+                        'title': '01 ${tile1title}',
+                        'nextTitle': '02 ${tile2title}',
+                        'active': '${tile1active}'
+                    },
+                    2: {
+                        'id': '${tile2ytid}',
+                        'sequence': 2,
+                        'title': '02 ${tile2title}',
+                        'nextTitle': '03 ${tile3title}',
+                        'active': '${tile2active}'
+                    },
+                    3: {
+                        'id': '${tile3ytid}',
+                        'sequence': 3,
+                        'title': '03 ${tile3title}',
+                        'nextTitle': '04 ${tile4title}',
+                        'active': '${tile3active}'
+                    },
+                    4: {
+                        'id': '${tile4ytid}',
+                        'sequence': 4,
+                        'title': '04 ${tile4title}',
+                        'nextTitle': '05 ${tile5title}',
+                        'active': '${tile4active}'
+                    },
+                    5: {
+                        'id': '${tile5ytid}',
+                        'sequence': 5,
+                        'title': '05 ${tile5title}',
+                        'nextTitle': '${tile0title}',
+                        'active': '${tile5active}'
+                    }
+                }
+
+            switch (number) {
+            case 0:
+                videoId = videoIds[0];
+                break;
+            case 1:
+                videoId = videoIds[1];
+                break;
+            case 2:
+                videoId = videoIds[2];
+                break;
+            case 3:
+                videoId = videoIds[3];
+                break;
+            case 4:
+                videoId = videoIds[4];
+                break;
+            case 5:
+                videoId = videoIds[5];
+                break;
+            case 6:
+                videoId = videoIds[5];
+                break;
+            default:
+                videoId = videoIds[0];
+                break;
+            }
+            return videoId;
+        }
         var tag = document.createElement('script'),
             vidNumber,
             theVideoId;
-        
+
         //Get the id parameter from the url
         vidNumber = getQuery('id');
-        
+
         //If there is no parameter, try and get a cookie for the last video the user watched
         if (!vidNumber) {
             vidNumber = getCookie('lvw17123');
             vidNumber = parseInt(vidNumber) + 1;
         }
-        
+
         //Give the video tile the active class
-        
+
         var activeTile = 'tile' + vidNumber,
             activeTileObject = document.getElementById(activeTile);
         console.log(activeTile);
-        
+
         $('#' + activeTile).addClass('tile_active');
-        
+
         //Get the actual YouTube Video Id from the list found in main.js
         theVideoId = getVideoId(vidNumber);
 
@@ -191,20 +305,20 @@
             });
             $('.scoreboard').fitVids();
         }
-        
+
         function initialize() {
             var currentVideo = theVideoId.sequence,
                 videoTitle = document.getElementById('videoTitle'),
                 nextVideoTitle = document.getElementById('nextTitle'),
                 lastVideoWatched = getCookie('lvw17123'),
                 videoSelector;
-            
+
             $('.tile_active').removeClass('tile_active');
             videoSelector = 'tile' + currentVideo;
             $('#' + videoSelector).addClass('tile_active');
-            
+
             setCookie('lvw17123', currentVideo, 300);
-            
+
             videoTitle.innerHTML = theVideoId.title;
             nextVideoTitle.innerHTML = theVideoId.nextTitle;
         }

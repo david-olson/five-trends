@@ -1,7 +1,7 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
-table{border-collapse:collapse;border-spacing:0}body{background-image:url("./assets/img/17123_PR_background-image.jpg");background-size:cover}
+table{border-collapse:collapse;border-spacing:0}body{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/17123_PR_background-image.jpg");background-size:cover}
 html{font-size:calc(.5em + .5vw)}@media screen and (min-width:25em){html{font-size:1.25em}
 }body,h1,h2,h3,h4,h5,p,a,button,input{font-family:"Roboto",sans-serif;color:#4b4b4b}
 h1{font-size:1.333rem;line-height:1.2;text-transform:uppercase}h2{font-size:1.215rem;line-height:1.2;margin-bottom:1rem;text-transform:uppercase;font-weight:900}
@@ -11,17 +11,19 @@ h3{font-size:1.138rem;line-height:1.2}h4{font-size:1.067rem;line-height:1.2}p{fo
 .clear{clear:both}.preloader{display:block;position:fixed;width:100%;height:100%;background-color:#333;z-index:99999}
 .preloader img{max-width:300px;position:absolute;top:50%;left:50%;-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
 .toast_overlay{display:none;position:fixed;height:100%;width:100%;background-color:rgba(0,0,0,0.75);top:0;left:0;z-index:9999}
-.share_toaster{display:none;max-width:500px;background-color:#fff;text-align:center;position:fixed;padding:90px;top:50%;left:50%;z-index:99999;transition:cubic-bezier(0.55,-0.39,0.44,1.32) .75s;-ms-transform:translate(-50%,-500%);transform:translate(-50%,-500%)}
+.share_toaster{display:none;width:90%;max-width:500px;background-color:#fff;text-align:center;position:fixed;padding:90px;top:50%;left:50%;z-index:99999;transition:cubic-bezier(0.55,-0.39,0.44,1.32) .75s;-ms-transform:translate(-50%,-500%);transform:translate(-50%,-500%)}
 .share_toaster .link{padding:10px;background-color:#efefef;margin-bottom:1rem;margin-top:1rem}
 .share_toaster ul{list-style:none;margin-top:2rem}.share_toaster ul li{display:inline-block;margin-right:20px}
 .share_toaster ul li img{width:30px;height:30px}.share_toaster p{font-size:.75rem;margin-top:1rem}
 .share_toaster p a{text-decoration:none;color:#00aeef;transition:all ease-out .25s}
 .share_toaster p a:hover{color:#006489;transition:all ease-out .25s}.top_angle{background-color:rgba(56,56,56,0.89);height:500px;width:100%;-ms-transform:skewY(-17deg) translateY(-420px);transform:skewY(-17deg) translateY(-420px);position:absolute;top:0;z-index:-1}
-.header{padding-top:20px;position:relative;width:100%;overflow:hidden;background-image:url(./assets/img/17123_dark-bg-img.jpg);background-size:cover;background-position:center}
+.header{padding-top:20px;position:relative;width:100%;overflow:hidden;background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/17123_dark-bg-img.jpg");background-size:cover;background-position:center}
 .header .logo{position:relative;top:0;left:0}.header .logo img{max-width:200px;display:inline-block;vertical-align:middle}
-.header .logo .divider{width:1px;height:75px;display:inline-block;background-color:#fff;vertical-align:middle;margin:0 20px}
-.header .logo h1{display:inline-block;vertical-align:middle;color:#fff;font-weight:normal}
-.header .learn{position:fixed;top:20px;right:0;z-index:999}.header .learn a{color:#fff;text-decoration:none;display:block;padding:20px 30px;background-color:#f76800;transition:all ease-out .25s;max-width:300px;margin-bottom:20px;box-shadow:0 0 10px 5px rgba(0,0,0,0.25)}
+@media only screen and (max-width:600px){.header .logo img{display:block;margin:0 auto;margin-bottom:2rem}
+}.header .logo .divider{width:1px;height:75px;display:inline-block;background-color:#fff;vertical-align:middle;margin:0 20px}
+@media only screen and (max-width:600px){.header .logo .divider{display:none}}.header .logo h1{display:inline-block;vertical-align:middle;color:#fff;font-weight:normal}
+@media only screen and (max-width:600px){.header .logo h1{display:block;text-align:center}
+}.header .learn{position:fixed;top:20px;right:0;z-index:999}.header .learn a{color:#fff;text-decoration:none;display:block;padding:20px 30px;background-color:#f76800;transition:all ease-out .25s;max-width:300px;margin-bottom:20px;box-shadow:0 0 10px 5px rgba(0,0,0,0.25)}
 .header .learn a p{color:#fff;margin-bottom:0;line-height:1}.header .learn a .read_it{font-size:1.75rem;text-transform:uppercase;text-align:center}
 .header .learn a .read_it_sub{font-size:.55rem;text-align:center}.header .learn a .contact_expert{font-size:1.15rem;text-transform:uppercase;text-align:center}
 .header .learn a .contact_expert_sub{font-size:.55rem;text-align:center}.header .learn a:hover{background-color:#c45300}
@@ -33,8 +35,8 @@ h3{font-size:1.138rem;line-height:1.2}h4{font-size:1.067rem;line-height:1.2}p{fo
 @media only screen and (max-width:600px){.header .learn a{width:100%;float:none;min-height:50px;height:auto}
 }.header .text_block{width:60%;margin-bottom:3rem;text-align:left;margin-top:100px}
 @media only screen and (max-width:900px){.header .text_block{width:100%}}.header .text_block p,.header .text_block h1,.header .text_block h2{color:#fff}
-.header .text_block h1{font-weight:900;letter-spacing:1px}@media only screen and (max-width:900px){.header{padding-top:120px}
-}@media only screen and (max-width:600px){.header{padding-top:200px}}.video_bg{display:block;position:absolute;top:0;left:0;width:100%;overflow:hidden;z-index:-1;height:550px}
+.header .text_block h1{font-weight:900;letter-spacing:1px}.mobile_button_padding{width:100%;height:120px}
+.video_bg{display:block;position:absolute;top:0;left:0;width:100%;overflow:hidden;z-index:-1;height:550px}
 .video_bg video{display:block;margin:0 auto;min-width:100%;min-height:100%;width:auto;height:auto;position:absolute;top:50%;left:50%;-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
 .main_video{display:inline-block;width:55%;vertical-align:top;padding:10px}@media only screen and (max-width:900px){.main_video{width:100%}
 }.main_video .scoreboard{margin-bottom:10px}.main_video .controls{display:block;width:100%;background-color:rgba(0,0,0,0.75);padding:5px 30px;color:#fff;font-size:.75rem;font-weight:300;line-height:40px;vertical-align:middle;margin-bottom:40px}
@@ -64,9 +66,10 @@ h3{font-size:1.138rem;line-height:1.2}h4{font-size:1.067rem;line-height:1.2}p{fo
 .video_tiles .tile_4:after{background-color:#aa0068}.video_tiles .tile_active .vid_num,.video_tiles .tile_active h3{color:#fff;transition-delay:.15s;transition:all ease-out .25s}
 .video_tiles .tile_active:after{height:500px}.form{display:none;padding:40px 0;text-align:left}
 footer{background-color:#00aeef;padding:40px 0}footer .legal{display:block;float:left}
-footer .legal p{font-size:.75rem;color:#fff}footer .social{display:block;float:right}
-footer .social .share{display:inline-block;vertical-align:middle;color:#036483;margin-right:20px}
-footer .social .share a{color:#036483;text-decoration:none;text-transform:uppercase}
+@media only screen and (min-width:400px){footer .legal{margin-bottom:1rem}}footer .legal p{font-size:.75rem;color:#fff}
+footer .social{display:block;float:right}footer .social .share{display:inline-block;vertical-align:middle;color:#036483;margin-right:20px}
+@media only screen and (min-width:400px){footer .social .share{margin-bottom:1rem}
+}footer .social .share a{color:#036483;text-decoration:none;text-transform:uppercase}
 footer .social .icons{display:inline-block;vertical-align:middle}footer .social .icons ul{list-style:none}
 footer .social .icons li{display:inline-block;margin-right:5px}footer .social .icons img{max-width:40px;max-height:40px;height:40px;width:40px;transition:all ease-out .25s}
 footer .social .icons img:hover{opacity:.5}

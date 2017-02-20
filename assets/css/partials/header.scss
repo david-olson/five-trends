@@ -3,7 +3,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    background-image: url(./assets/img/17123_dark-bg-img.jpg);
+    background-image: url('http://offers.premierinc.com/rs/381-NBB-525/images/17123_dark-bg-img.jpg');
     background-size: cover;
     background-position: center;
     .logo {
@@ -14,6 +14,11 @@
             max-width: 200px;
             display: inline-block;
             vertical-align: middle;
+            @media only screen and (max-width: 600px) {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 2rem;
+            }
         }
         .divider {
             width: 1px;
@@ -22,12 +27,19 @@
             background-color: #fff;
             vertical-align: middle;
             margin: 0 20px;
+            @media only screen and (max-width: 600px) {
+                display: none;
+            }
         }
         h1 {
             display: inline-block;
             vertical-align: middle;
             color: #ffffff;
             font-weight: normal;
+            @media only screen and (max-width: 600px) {
+                display: block;
+                text-align: center;
+            }
         }
     }
     .learn {
@@ -128,10 +140,9 @@
             letter-spacing: 1px;
         }
     }
-    @media only screen and (max-width: 900px) {
-        padding-top: 120px;
-    }
-    @media only screen and (max-width: 600px) {
-        padding-top: 200px;
-    }
+}
+
+.mobile_button_padding {
+    width: 100%;
+    height: 120px;
 }

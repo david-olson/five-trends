@@ -126,77 +126,6 @@ function changeHeading(param) {
     }
 }
 
-function getVideoId(number) {
-    number = parseInt(number);
-    var videoId,
-        videoIds = {
-            0: {
-                'id': 'M1LRVICWPUk',
-                'sequence': 0,
-                'title': '00 A look Ahead',
-                'nextTitle': '01 Repeal and Replace'
-            },
-            1: {
-                'id': 'M1LRVICWPUk',
-                'sequence': 1,
-                'title': '01 Repeal and Replace',
-                'nextTitle': '02 Value-Based Care'
-            },
-            2: {
-                'id': '6nT911jkWEo',
-                'sequence': 2,
-                'title': '02 Value-Based Care',
-                'nextTitle': '03 Transfer of Power'
-            },
-            3: {
-                'id': 'abQRt6p8T7g',
-                'sequence': 3,
-                'title': '03 Transfer of Power',
-                'nextTitle': '04 Competition'
-            },
-            4: {
-                'id': 'HamYmjllE6A',
-                'sequence': 4,
-                'title': '04 Competition',
-                'nextTitle': '05 Consumer-Driven Healthcare'
-            },
-            5: {
-                'id': 'VHdsoNewFdU',
-                'sequence': 5,
-                'title': '05 Consumer-Driven Healthcare',
-                'nextTitle': 'Video 6'
-            }
-        }
-
-    switch (number) {
-    case 0:
-        videoId = videoIds[0];
-        break;
-    case 1:
-        videoId = videoIds[1];
-        break;
-    case 2:
-        videoId = videoIds[2];
-        break;
-    case 3:
-        videoId = videoIds[3];
-        break;
-    case 4:
-        videoId = videoIds[4];
-        break;
-    case 5:
-        videoId = videoIds[5];
-        break;
-    case 6:
-        videoId = videoIds[5];
-        break;
-    default:
-        videoId = videoIds[0];
-        break;
-    }
-    return videoId;
-}
-
 function updateVideoTitle(string) {
     var videoTitle = document.getElementById('videoTitle'),
         nextVideoTitle = document.getElementById('nextTitle'),
@@ -292,9 +221,9 @@ function shareClose() {
 }
 
 function skipVideo() {
-    
+
     var curentVideo = window.location.href;
-    
+
     curentVideo = curentVideo.substr(-1);
 
     curentVideo = parseInt(curentVideo) + 1;
@@ -302,11 +231,18 @@ function skipVideo() {
     var nextVideo = getVideoId(curentVideo),
         videoSelector,
         attr = '?id=' + curentVideo;
-    player.loadVideoById(nextVideo.id);
-    updateVideoTitle(nextVideo);
 
-    $('.tile_active').removeClass('tile_active');
-    videoSelector = 'tile' + nextVideo.sequence;
-    $('#' + videoSelector).addClass('tile_active');
-    history.pushState(null, null, attr);
+    if (nextVideo.active == 'inactive') {
+        return false;
+    } else {
+        player.loadVideoById(nextVideo.id);
+        updateVideoTitle(nextVideo);
+
+        $('.tile_active').removeClass('tile_active');
+        videoSelector = 'tile' + nextVideo.sequence;
+        $('#' + videoSelector).addClass('tile_active');
+        history.pushState(null, null, attr);
+    }
+
+
 }
