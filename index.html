@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="main.min.css">
+    <meta class="mktoBoolean" id="tile1active" mktoName="Tile 1 Active" false_value="inactive" true_value="button_active">
 </head>
 
 <body>
@@ -47,16 +48,16 @@
                     <div class="skip_holder" id="skipHolder">
                         <span class="skip_info">Skip to Next: </span>
                         <span class="next_title" id="nextTitle">Next Video Title</span>
-                        <a href="#"><img src="./assets/img/17123_skip.png" alt="Skip" /></a>
+                        <a href="javascript:skipVideo()"><img src="./assets/img/17123_skip.png" alt="Skip" /></a>
                     </div>
                     <div class="clear"></div>
                 </div>
             </div>
             <div class="video_tiles" id="videoTiles">
-                <div class="tile tile_0" id="tile0">
+                <div class="tile tile_0 ${tile1active}" id="tile0">
                     <span class="vid_num">00</span>
                     <h3>A look Ahead: Healthcare Under a New Administration</h3>
-                    <a href="?id=0" class="play_button play_button_active" id="video0"><img src="./assets/img/17123_go.svg" alt="" /></a>
+                    <a href="?id=0" class="play_button play_${tile1active}" id="video0"><img src="./assets/img/17123_go.svg" alt="" /></a>
                 </div>
                 <div class="tile tile_1" id="tile1">
                     <span class="vid_num">01</span>
@@ -86,7 +87,7 @@
             </div>
         </div>
     </section>
-    <section class="form">
+    <section class="form" id="formHolder">
         <div class="container">
             <div>
                 <h2>WANT TO LEARN MORE?</h2>
@@ -133,11 +134,12 @@
         <div class="link" id="shareLink"></div>
         <div class="social_share_icons">
             <ul>
-                <li><a href="#"><img src="./assets/img/17123_facebook.svg" alt="Share on Facebook" /></a></li>
-                <li><a href="#"><img src="./assets/img/17123_twitter.svg" alt="Share on Twitter" /></a></li>
-                <li><a href="#"><img src="./assets/img/17123_linkedin.svg" alt="Share on LinkedIn" /></a></li>
+                <li><a id="facebookShare" href="#"><img src="./assets/img/17123_facebook.svg" alt="Share on Facebook" /></a></li>
+                <li><a target="_blank" href="https://twitter.com/intent/tweet?text=Read%20this%3A%205%20Trends%20in%20Healthcare%20for%202017&url=http%3A%2F%2Fpremierinc.com"><img src="./assets/img/17123_twitter.svg" alt="Share on Twitter" /></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fpremierinc.com"><img src="./assets/img/17123_linkedin.svg" alt="Share on LinkedIn" /></a></li>
             </ul>
         </div>
+        <p><a href="javascript:shareClose()">Close this window.</a></p>
     </div>
     <script src="./assets/js/custom.min.js"></script>
     <script src="./assets/js/vendors.min.js"></script>
@@ -201,17 +203,32 @@
             videoSelector = 'tile' + currentVideo;
             $('#' + videoSelector).addClass('tile_active');
             
-            if (lastVideoWatched == '') {
-                setCookie('lvw17123', currentVideo, 300);
-                nextVideoTitle.innerHTML = theVideoId.nextTitle;
-            } else {
-                nextVideoTitle.innerHTML = 'Video ' + (parseInt(lastVideoWatched) + 1);
-                if (lastVideoWatched < currentVideo) {
-                    setCookie('lvw17123', currentVideo, 300);
-                }
-                videoTitle.innerHTML = theVideoId.title;
-            }
+            setCookie('lvw17123', currentVideo, 300);
+            
+            videoTitle.innerHTML = theVideoId.title;
+            nextVideoTitle.innerHTML = theVideoId.nextTitle;
         }
+    </script>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '382579548779670',
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     </script>
 </body>
 

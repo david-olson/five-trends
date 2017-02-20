@@ -29,6 +29,10 @@
             .video_title {
                 color: $blue;
             }
+            @media only screen and (max-width: 1100px) {
+                float: none;
+                display: block;
+            }
         }
         .skip_holder {
             display: block;
@@ -48,6 +52,10 @@
                     display: inline-block;
                     vertical-align: middle;
                 }
+            }
+            @media only screen and (max-width: 1100px) {
+                float: none;
+                display: block;
             }
         }
     }
@@ -116,6 +124,12 @@
             }
             &:after {
                 transform: skewY(-23deg) translateY(100px);
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            width: 100%;
+            &:after {
+                transform: skewY(-23deg) translateY(115px);
             }
         }
         .vid_num {

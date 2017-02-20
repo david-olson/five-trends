@@ -6,7 +6,7 @@ window.onresize = function () {
     setTileHeights();
 }
 
-window.onpopstate = function() {
+window.onpopstate = function () {
     location.reload();
 }
 
@@ -14,17 +14,18 @@ function main() {
     setTileHeights();
     playClickHandler();
     playInactiveClickHandler();
-    setTimeout(function() {
+    setTimeout(function () {
         $('.preloader').fadeOut(500);
-    },500);
-    $('#toastOverlay').click(function(){
-        setTimeout(function() {
-            $('#toastOverlay').fadeOut(500);
-        }, 250)
-        $('#shareToaster').css({
-            transform: 'translate(-50%, -500%)'
-        });
-        
+    }, 500);
+    $('#toastOverlay').click(shareClose);
+    document.getElementById('facebookShare').addEventListener('click', function (e) {
+        e.preventDefault();
+        FB.ui({
+            method: 'share',
+            href: 'https://premierinc.com',
+            app_id: '382579548779670',
+            display: 'iframe'
+        }, function (response) {});
     });
 }
 
@@ -203,17 +204,19 @@ function updateVideoTitle(string) {
 
     console.log(lastVideoWatched);
 
-    if (lastVideoWatched == '') {
-        setCookie('lvw17123', string.sequence, 300);
-        nextVideoTitle.innerHTML = string.nextTitle;
-    } else {
-        nextVideoTitle.innerHTML = 'Video ' + (parseInt(lastVideoWatched) + 1);
-        if (lastVideoWatched < string.sequence) {
-            setCookie('lvw17123', string.sequence, 300);    
-        }
-        
-    }
+    //    if (lastVideoWatched == '') {
+    //        setCookie('lvw17123', string.sequence, 300);
+    //        nextVideoTitle.innerHTML = string.nextTitle;
+    //    } else {
+    //        nextVideoTitle.innerHTML = 'Video ' + (parseInt(lastVideoWatched) + 1);
+    //        if (lastVideoWatched < string.sequence) {
+    //            setCookie('lvw17123', string.sequence, 300);
+    //        }
+    //
+    //    }
     videoTitle.innerHTML = string.title;
+    nextVideoTitle.innerHTML = string.nextTitle;
+    setCookie('lvw17123', string.sequence, 300);
 }
 
 function playClickHandler() {
@@ -232,7 +235,7 @@ function playClickHandler() {
             $('.tile_active').removeClass('tile_active');
             videoSelector = 'tile' + videoId.sequence;
             $('#' + videoSelector).addClass('tile_active');
-            history.pushState(null, null,attr);
+            history.pushState(null, null, attr);
         });
     }
 }
@@ -240,35 +243,70 @@ function playClickHandler() {
 function playInactiveClickHandler() {
     var playButtonsInactive = document.getElementsByClassName('play_inactive'),
         x;
-    
-    for (x = 0; x<playButtonsInactive.length; x++) {
-        playButtonsInactive[x].addEventListener('click', function(e) {
-           e.preventDefault(); 
+
+    for (x = 0; x < playButtonsInactive.length; x++) {
+        playButtonsInactive[x].addEventListener('click', function (e) {
+            e.preventDefault();
         });
     }
 }
 
 function readItNow() {
     $('.form').slideDown(250);
+    $('html, body').animate({
+        scrollTop: $('#formHolder').position().top
+    });
 }
 
 function contactExpert() {
     $('.form').slideDown(250);
+    $('html,body').animate({
+        scrollTop: $('#formHolder').position().top
+    });
 }
 
 function shareHandler() {
     var videoLink = document.getElementById('shareLink'),
         link = window.location.href;
-    
+
     videoLink.innerHTML = link;
-    
+
     $('#toastOverlay').fadeIn(500);
     $('#shareToaster').css({
         display: 'block'
     });
-    setTimeout(function() {
-       $('#shareToaster').css({
-          transform: 'translate(-50%, -50%)' 
-       });
+    setTimeout(function () {
+        $('#shareToaster').css({
+            transform: 'translate(-50%, -50%)'
+        });
     }, 250);
+}
+
+function shareClose() {
+    setTimeout(function () {
+        $('#toastOverlay').fadeOut(500);
+    }, 250)
+    $('#shareToaster').css({
+        transform: 'translate(-50%, -500%)'
+    });
+}
+
+function skipVideo() {
+    
+    var curentVideo = window.location.href;
+    
+    curentVideo = curentVideo.substr(-1);
+
+    curentVideo = parseInt(curentVideo) + 1;
+
+    var nextVideo = getVideoId(curentVideo),
+        videoSelector,
+        attr = '?id=' + curentVideo;
+    player.loadVideoById(nextVideo.id);
+    updateVideoTitle(nextVideo);
+
+    $('.tile_active').removeClass('tile_active');
+    videoSelector = 'tile' + nextVideo.sequence;
+    $('#' + videoSelector).addClass('tile_active');
+    history.pushState(null, null, attr);
 }
