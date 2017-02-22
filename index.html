@@ -8,7 +8,9 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="http://offers.premierinc.com/rs/381-NBB-525/images/17123_A_main.min.css">
-<!--   <link rel="stylesheet" href="main.min.css">-->
+<!--            <link rel="stylesheet" href="main.min.css">-->
+
+    <!--Marketo-->
     <meta class="mktoBoolean" id="tile0active" mktoName="Tile 0 Active" false_value="inactive" true_value="button_active">
     <meta class="mktoString" id="tile0ytid" mktoName="Tile 0 YouTube ID" default="qbmmwjWIOpo">
     <meta class="mktoString" id="tile0title" mktoName="Tile 0 Title" default="A Look Ahead">
@@ -38,6 +40,18 @@
     <meta class="mktoBoolean" id="button2Show" mktoName="Show Button 2" false_value="none" true_value="block">
     <meta class="mktoString" id="button2Link" mktoName="Button 2 Link" default="javascript:contactExpert()">
     <meta class="mktoBoolean" id="mobileButtonPadding" mktoName="Mobile Button Padding - Turn off if both buttons are disabled" false_value="none" true_value="block">
+    <meta class="mktoString" id="facebookShareLink" mktoName="Facebook Share Link" default="http://premierinc.com">
+    <meta class="mktoString" id="facebookShareTitle" mktoName="Facebook Share Title" default="5 Trends for Healthcare in 2017 | Premier Inc.">
+    <meta class="mktoString" id="facebookShareDesc" mktoName="Facebook Share Description" default="Wondering what changes you can expect to see in healthcare under the new administration? You’re not alone.">
+    <meta class="mktoString" id="facebookShareImageLink" mktoName="Facebook Share Image Link" default="#">
+    <!--/Marketo-->
+
+    <!--Facebook-->
+    <meta property="og:url" content="${facebookShareLink}" />
+    <meta property="og:title" content="${facebookShareTitle}" />
+    <meta property="og:description" content="${facebookShareDesc}" />
+    <meta property="og:image" content="${facebookShareImageLink}" />
+    <!--/Facebook-->
 </head>
 
 <body>
@@ -46,7 +60,7 @@
     </div>
     <section class="header">
         <div class="container">
-           <div class="mobile_button_padding" style="display: ${mobileButtonPadding}"></div>
+            <div class="mobile_button_padding" style="display: ${mobileButtonPadding}"></div>
             <div class="logo">
                 <img src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_PR_logo.svg" alt="" />
                 <div class="divider"></div>
@@ -57,12 +71,12 @@
                     <p class="read_it">Read It Now</p>
                     <p class="read_it_sub">Susan Devore’s 2017 Perspectives Report</p>
                 </a>
-                <a href="${button2Link}" style="display: ${button2Show}">
+                <a href="javascript:contactExpert()" style="display: ${button2Show}">
                     <p class="contact_expert">Contact an Expert</p>
                     <p class="contact_expert_sub">Find out how Premier can position you for success as you navigate 2017.</p>
                 </a>
             </div>
-            
+
             <div class="text_block mktoText" id="mainBody" mktoName="Main Body Text">
                 <h2>Healthcare is changing. Are. You. Ready?</h2>
                 <p>The future of healthcare is up in the air, find out what the experts at Premier think we will see in 2017 and the important next steps we must take to impact, influence and transform the conversation.</p>
@@ -123,7 +137,11 @@
             <div>
                 <h2>WANT TO LEARN MORE?</h2>
                 <p>Read Susan DeVore’s featured article highlighting her 2017 Perspectives.</p>
-                <!--FORM GOES HERE-->
+                <script src="//app-ab03.marketo.com/js/forms2/js/forms2.min.js"></script>
+                <form id="mktoForm_1364"></form>
+                <script>
+                    MktoForms2.loadForm("//app-ab03.marketo.com", "381-NBB-525", 1364);
+                </script>
             </div>
         </div>
     </section>
@@ -162,7 +180,8 @@
     <div class="share_toaster" id="shareToaster">
         <h2>Share this Page</h2>
         <p>Link for email:</p>
-        <div class="link" id="shareLink"></div>
+        <textarea class="link" id="shareLink" name="">Click Here to copy to keyboard</textarea>
+        <p class="small">Command + C or Control + C to copy to clipboard.</p>
         <div class="social_share_icons">
             <ul>
                 <li>
@@ -179,8 +198,32 @@
         <p><a href="javascript:shareClose()">Close this window.</a></p>
     </div>
     <script src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_A_custom.min.js"></script>
-<!--   <script src="./assets/js/custom.min.js"></script>-->
+<!--       <script src="./assets/js/custom.min.js"></script>-->
     <script src="http://offers.premierinc.com/rs/381-NBB-525/images/17123_A_vendors.min.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            var didInit = false;
+
+            function initMunchkin() {
+                if (didInit === false) {
+                    didInit = true;
+                    Munchkin.init('381-NBB-525');
+                }
+            }
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//munchkin.marketo.net/munchkin.js';
+            s.onreadystatechange = function () {
+                if (this.readyState == 'complete' || this.readyState == 'loaded') {
+                    initMunchkin();
+                }
+            };
+            s.onload = initMunchkin;
+            document.getElementsByTagName('head')[0].appendChild(s);
+        })();
+    </script>
     <script>
         function getVideoId(number) {
             number = parseInt(number);
@@ -282,6 +325,10 @@
         //Get the actual YouTube Video Id from the list found in main.js
         theVideoId = getVideoId(vidNumber);
 
+        if (theVideoId.active == 'inactive') {
+            theVideoId = getVideoId(0);
+        }
+
         tag.src = 'https://www.youtube.com/iframe_api';
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
@@ -321,6 +368,9 @@
 
             videoTitle.innerHTML = theVideoId.title;
             nextVideoTitle.innerHTML = theVideoId.nextTitle;
+            Munchkin.munchkinFunction('clickLink', {
+                href: 'videoId=' + theVideoId.sequence
+            });
         }
     </script>
     <script>

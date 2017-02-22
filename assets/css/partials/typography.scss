@@ -1,15 +1,15 @@
 //Fluid Typography. Scale Based on a 1.333 ratio.
 
 html {
-    font-size: calc(.5em + .5vw);
+    font-size: calc(1em + 1vw);
 }
 
 
 /* setting the max width*/
 
-@media screen and (min-width: 25em) {
+@media screen and (min-width: 75em) {
     html {
-        font-size: 1.25em;
+        font-size: 1.75em;
     }
 }
 

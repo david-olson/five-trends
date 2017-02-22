@@ -7,6 +7,7 @@
 .bold {
     font-weight: 900;
 }
+
 .light {
     font-weight: 400;
 }
@@ -42,7 +43,7 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(0, 0, 0, 0.75);
     top: 0;
     left: 0;
     z-index: 9999;
@@ -59,13 +60,32 @@
     top: 50%;
     left: 50%;
     z-index: 99999;
-    transition: cubic-bezier(.55,-0.39,.44,1.32) .75s;
+    transition: cubic-bezier(.55, -0.39, .44, 1.32) .75s;
     transform: translate(-50%, -500%);
     .link {
         padding: 10px;
         background-color: #efefef;
         margin-bottom: 1rem;
         margin-top: 1rem;
+        font-size: .75rem;
+        cursor: pointer;
+        position: relative;
+        &:after {
+            content: 'Link Copied!';
+            transition: all ease-out .25s;
+            position: absolute;
+            display: block;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: $blue;
+            opacity: 0;
+        }
+    }
+    .link.appear {
+        &:after {
+            opacity: 1;
+        }
     }
     ul {
         list-style: none;
@@ -76,6 +96,10 @@
             img {
                 width: 30px;
                 height: 30px;
+                transition: all ease-out .25s;
+                &:hover {
+                    opacity: .75;
+                }
             }
         }
     }

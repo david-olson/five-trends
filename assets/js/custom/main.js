@@ -199,6 +199,8 @@ function shareHandler() {
         link = window.location.href;
 
     videoLink.innerHTML = link;
+    
+    $('#shareLink').select();
 
     $('#toastOverlay').fadeIn(500);
     $('#shareToaster').css({
@@ -207,7 +209,9 @@ function shareHandler() {
     setTimeout(function () {
         $('#shareToaster').css({
             transform: 'translate(-50%, -50%)'
+         
         });
+        $('#shareLink').select();
     }, 250);
 }
 

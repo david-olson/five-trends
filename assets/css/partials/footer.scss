@@ -20,13 +20,17 @@ footer {
             vertical-align: middle;
             color: #036483;
             margin-right: 20px;
-            @media only screen and (min-width: 400px) {
+            @media only screen and (max-width: 600px) {
                 margin-bottom: 1rem;
             }
             a {
                 color: #036483;
                 text-decoration: none;
                 text-transform: uppercase;
+                transition: all ease-out .25s;
+                &:hover {
+                    color: darken(#036483, 10%);
+                }
             }
         }
         .icons {
