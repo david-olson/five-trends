@@ -56,7 +56,7 @@
             transition: all ease-out .25s;
             max-width: 300px;
             margin-bottom: 20px;
-            box-shadow: 0 0 10px 5px rgba(0,0,0,0.25);
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.25);
             p {
                 color: #ffffff;
                 margin-bottom: 0;
@@ -112,7 +112,7 @@
             &:after {
                 display: block;
                 content: '';
-                clear:both;
+                clear: both;
             }
         }
         @media only screen and (max-width: 600px) {
@@ -128,11 +128,13 @@
         width: 60%;
         margin-bottom: 3rem;
         text-align: left;
-        margin-top: 100px;
+        margin-top: 50px;
         @media only screen and (max-width: 900px) {
             width: 100%;
         }
-        p, h1, h2 {
+        p,
+        h1,
+        h2 {
             color: #ffffff;
         }
         h1 {
@@ -143,6 +145,12 @@
 }
 
 .mobile_button_padding {
-    width: 100%;
-    height: 120px;
+    height: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    .mobile_button_padding {
+        width: 100%;
+        height: 120px;
+    }
 }

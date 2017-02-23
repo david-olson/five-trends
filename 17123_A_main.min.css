@@ -58,7 +58,7 @@ h3{font-size:1.138rem;line-height:1.2}h4{font-size:1.067rem;line-height:1.2}p{fo
 .video_tiles .tile h3{max-width:80%}.video_tiles .tile:after{-ms-transform:skewY(-23deg) translateY(100px);transform:skewY(-23deg) translateY(100px)}
 }@media only screen and (max-width:600px){.video_tiles .tile{width:100%}.video_tiles .tile:after{-ms-transform:skewY(-23deg) translateY(115px);transform:skewY(-23deg) translateY(115px)}
 }.video_tiles .tile .vid_num{font-size:1.5rem;font-weight:bold;display:block;margin-bottom:10px;position:relative;z-index:2}
-.video_tiles .tile h3{font-size:.65rem;font-weight:bold;position:relative;z-index:2}
+.video_tiles .tile h3{font-size:.5rem;font-weight:bold;position:relative;z-index:2}
 .video_tiles .tile a{position:absolute;z-index:2;bottom:10px;right:10px}.video_tiles .tile a img{max-width:30px;height:30px}
 .video_tiles .tile .play_inactive{cursor:default}.video_tiles .inactive{opacity:.5}
 .video_tiles .inactive:hover{opacity:.5}.video_tiles .tile_0{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/17123_00_Susan.jpg");background-size:cover;background-position:center}
@@ -85,15 +85,16 @@ h3{font-size:1.138rem;line-height:1.2}h4{font-size:1.067rem;line-height:1.2}p{fo
 .form p{margin-bottom:1rem}.form .mktoForm{width:100% !important}.form .mktoForm .mktoLabel{display:block !important;width:100% !important;font-size:.75rem;font-family:"Roboto",sans-serif}
 .form .mktoForm .mktoGutter,.form .mktoForm .mktoOffset{display:none !important}.form .mktoForm .mktoFormCol,.form .mktoForm .mktoFieldWrap{width:100% !important}
 .form .mktoForm .mktoField{width:100% !important;display:block !important;background-color:rgba(255,255,255,0);padding:10px 0;font-size:1rem;border:0;border-bottom:2px solid #000;margin-bottom:1rem;transition:all ease-out .25s;outline:0;font-family:"Roboto",sans-serif}
-.form .mktoForm .mktoField:focus{border-bottom-color:#00aeef}.form .mktoForm .mktoFormRow:nth-of-type(odd){display:inline-block !important;width:49% !important;float:none !important;margin-right:2% !important}
+.form .mktoForm .mktoField:focus{border-bottom-color:#00aeef}.form .mktoForm .mktoFormRow:nth-of-type(odd){display:inline-block !important;width:49% !important;float:none !important;margin-right:2% !important;vertical-align:top}
 @media only screen and (max-width:900px){.form .mktoForm .mktoFormRow:nth-of-type(odd){width:100% !important}
-}.form .mktoForm .mktoFormRow:nth-of-type(even){width:49% !important;float:none !important;display:inline-block !important}
+}.form .mktoForm .mktoFormRow:nth-of-type(even){width:49% !important;float:none !important;display:inline-block !important;vertical-align:top}
 @media only screen and (max-width:900px){.form .mktoForm .mktoFormRow:nth-of-type(even){width:100% !important}
 }.form .mktoForm .mktoButtonRow{width:50% !important;display:block !important}@media only screen and (max-width:900px){.form .mktoForm .mktoButtonRow{width:100% !important}
 }.form .mktoForm .mktoButtonWrap{margin:0 !important}.form .mktoForm .mktoButtonWrap button{display:block !important;width:100% !important;padding:10px !important;font-size:1rem !important;background-color:#00aeef !important;background-image:none !important;border:0 !important;font-family:"Roboto",sans-serif;text-transform:uppercase;transition:all ease-out .25s}
 .form .mktoForm .mktoButtonWrap button:hover{background-color:#0076a3 !important}
-.form .mktoForm .mktoRadioList{width:100% !important}.form .mktoForm .mktoField[type=radio]{display:inline-block !important;width:2% !important;float:none !important;margin-right:1% !important}
+.form .mktoForm .mktoRadioList{width:100% !important;margin-top:2rem !important}.form .mktoForm .mktoField[type=radio]{display:inline-block !important;width:2% !important;float:none !important;margin-right:1% !important}
 .form .mktoForm .mktoRadioList label{display:inline-block !important;vertical-align:top !important;width:97% !important;margin:0 !important;float:none !important}
+.form .mktoForm textarea{padding:10px !important;border:2px solid #000 !important;font-size:.75rem !important;margin-top:1rem !important}
 footer{background-color:#00aeef;padding:40px 0}footer .legal{display:block;float:left}
 @media only screen and (min-width:400px){footer .legal{margin-bottom:1rem}}footer .legal p{font-size:.75rem;color:#fff}
 footer .social{display:block;float:right}footer .social .share{display:inline-block;vertical-align:middle;color:#036483;margin-right:20px}
