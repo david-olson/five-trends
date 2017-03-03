@@ -33,8 +33,8 @@ h3{font-size:1.138rem;line-height:1.2}h4{font-size:1.067rem;line-height:1.2}p{fo
 @media only screen and (max-width:900px){.header .learn{top:0;left:0;width:100%;z-index:888}
 .header .learn a{display:block;width:50%;margin:0;max-width:1000px;height:100px;box-shadow:0 0}
 .header .learn a:first-of-type{float:left}.header .learn a:last-of-type{float:right}
-.header .learn:after{display:block;content:'';clear:both}}
-@media only screen and (max-width:600px){.header .learn a{width:100%;float:none;min-height:50px;height:auto}
+.header .learn:after{display:block;content:'';clear:both}
+}@media only screen and (max-width:600px){.header .learn a{width:100%;float:none;min-height:50px;height:auto}
 }.header .text_block{width:60%;margin-bottom:3rem;text-align:left;margin-top:50px}
 @media only screen and (max-width:900px){.header .text_block{width:100%}}.header .text_block p,.header .text_block h1,.header .text_block h2{color:#fff}
 .header .text_block h1{font-weight:900;letter-spacing:1px}.mobile_button_padding{height:0}
@@ -103,4 +103,8 @@ footer .social{display:block;float:right}footer .social .share{display:inline-bl
 footer .social .share a:hover{color:#023e51}footer .social .icons{display:inline-block;vertical-align:middle}
 footer .social .icons ul{list-style:none}footer .social .icons li{display:inline-block;margin-right:5px}
 footer .social .icons img{max-width:40px;max-height:40px;height:40px;width:40px;transition:all ease-out .25s}
-footer .social .icons img:hover{opacity:.5}
+footer .social .icons img:hover{opacity:.5}body.dark{background-image:url("http://offers.premierinc.com/rs/381-NBB-525/images/17123_dark-bg-img.jpg")}
+body.dark .header{background-image:none}body.dark .copy{margin-top:2rem;margin-bottom:2rem}
+body.dark .copy p{color:#fff;margin-bottom:1rem}body.dark .copy p a{color:#fff}body.dark .copy .button{display:inline-block;color:#fff;background-color:#00aeef;padding:15px 30px;text-decoration:none;text-transform:uppercase;box-shadow:0 0 10px 5px rgba(0,0,0,0.25);margin-top:3rem;transition:all ease-out .25s}
+body.dark .copy .button:hover{background-color:#0089bc}body.dark footer{background-color:initial}
+body.dark footer .share{color:#fff}body.dark footer .share p,body.dark footer .share a{color:#fff}

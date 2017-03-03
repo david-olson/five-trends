@@ -1,0 +1,40 @@
+body.dark {
+    background-image: url('http://offers.premierinc.com/rs/381-NBB-525/images/17123_dark-bg-img.jpg');
+    .header {
+        background-image: none;
+    }
+    .copy {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        p {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            a {
+                color: #ffffff;
+            }
+        }
+        .button {
+            display: inline-block;
+            color: #ffffff;
+            background-color: $blue;
+            padding: 15px 30px; 
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px 5px rgba(0,0,0,0.25);
+            margin-top: 3rem;
+            transition: all ease-out .25s;
+            &:hover {
+                background-color: darken($blue, 10%);
+            }
+        }
+    }
+    footer {
+        background-color: initial;
+        .share {
+            color: #ffffff;
+            p, a {
+                color: #ffffff;
+            }
+        }
+    }
+}
