@@ -225,10 +225,16 @@ function shareClose() {
 }
 
 function skipVideo() {
+    
+    var curentVideo = document.getElementById('nextTitle').innerHTML;
 
-    var curentVideo = window.location.href;
+//    var curentVideo = window.location.href;
 
-    curentVideo = curentVideo.substr(-1);
+    curentVideo = curentVideo.substr(1);
+    
+    if (isNaN(curentVideo)) {
+        curentVideo = 0;
+    }
 
     curentVideo = parseInt(curentVideo) + 1;
 
